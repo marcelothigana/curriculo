@@ -1,97 +1,286 @@
 {
-  "nome": "Pedro Elias dos Santos Ferreira",
-  "cargo": "Designer Gráfico | Auxiliar Administrativo",
+  "nome": "Marcelino Thiganá",
+  "cargo": "Terapeuta | Escritor | Pesquisador | Especialista em Dança de Salão",
   "contato": {
     "telefones": [
-      "(41) 98840-2775"
+      "(91) 98195-6640"
     ],
-    "email": "pedroeliasferreira@gmail.com",
-    "linkedin": "linkedin.com/in/pedroeliasferreira",
-    "localizacao": "Rua Santa Maria, 38, Atalaia, Ananindeua/PA"
+    "email": "marcelothiganah@gmail.com",
+    "linkedin": "linkedin.com/in/marcelothigana",
+    "localizacao": "Trav. Guerra Passos, 60, Canudos, Belém/PA"
   },
-  "resumo": "Graduado em Tecnologia em Design Gráfico (concluído em 2025), PCD auditivo, com perfil resiliente e foco em comunicação visual. Experiência administrativa e habilidades em produção e edição gráfica, unindo organização e criatividade.",
+  "resumo": "Marcelino Thiganá é paraense, terapeuta, escritor, pesquisador e especialista em Dança de Salão. Desenvolve estudos e práticas interdisciplinares relacionadas à dança, cultura amazônica, movimento corporal, saúde, bem-estar, terapia e desenvolvimento humano. Sua trajetória profissional e acadêmica caracteriza-se pela articulação entre conhecimento científico, experiência prática e valorização da cultura regional, utilizando a dança e o movimento como instrumentos de expressão, educação, inclusão social e promoção da qualidade de vida. Atua no desenvolvimento de propostas que aproximam dança, processos terapêuticos e conhecimentos relacionados à neurociência, buscando compreender as relações entre movimento, música, corpo, emoções e comportamento humano.",
   "areaAtuacao": [
-    "Design Gráfico",
-    "Edição de Vídeo",
-    "Administrativo"
+    "Dança e Terapia",
+    "Dança e Saúde",
+    "Dança e Neurociência",
+    "Cultura Amazônica e Dança",
+    "Dança de Salão",
+    "Patrimônio Cultural Paraense (Brega/Tecno Melody)",
+    "Arte e Inclusão Social",
+    "Educação pela Dança",
+    "Desenvolvimento Humano"
   ],
-  "experiencia": [
+  "experienciaDocente": [
     {
-      "empresa": "TJPR - Tribunal de Justiça do Paraná",
-      "periodo": "2021 - 2023",
-      "local": "Curitiba - PR",
-      "cargo": "Auxiliar Administrativo",
-      "descricao": [
-        "Gestão documental e suporte administrativo especializado ao setor de processos",
-        "Expertise em organização de dados via Microsoft Excel",
-        "Manutenção de sistemas de registro corporativo",
-        "Garantia da celeridade na tramitação de documentos oficiais"
+      "tipo": "Docência e Formação",
+      "periodo": "1998 - Presente",
+      "atividades": [
+        "Cursos de dança de salão",
+        "Oficinas de dança como terapia",
+        "Palestras e workshops",
+        "Imersões formativas",
+        "Projetos educacionais e culturais",
+        "Atividades de educação corporal e movimento",
+        "Ministração de palestras, cursos e oficinas para diferentes públicos, com ênfase na utilização da dança e do movimento como instrumentos de educação, cultura, saúde e desenvolvimento humano"
       ]
+    }
+  ],
+  "experienciaInternacional": [
+    {
+      "local": "Londres – Inglaterra",
+      "tipo": "Oficinas/Atividades formativas"
     },
     {
-      "empresa": "Trombini Embalagens S/A",
-      "periodo": "2019 - 2021",
-      "local": "Curitiba - PR",
-      "cargo": "Auxiliar de Escritório",
-      "descricao": [
-        "Treinamentos na área de auxiliar de escritório"
-      ]
+      "local": "Berlim – Alemanha",
+      "tipo": "Oficinas/Atividades formativas"
+    },
+    {
+      "local": "Havana – Cuba",
+      "tipo": "Oficinas/Atividades formativas"
+    },
+    {
+      "local": "Paris – França",
+      "tipo": "Oficinas/Atividades formativas"
+    },
+    {
+      "local": "Chicago – EUA",
+      "tipo": "Oficinas/Atividades formativas"
     }
   ],
   "formacao": [
     {
-      "nivel": "Tecnologia em Design Gráfico",
+      "nivel": "Bacharelado em Direito",
       "instituicao": "UNAMA - Universidade da Amazônia",
-      "conclusao": "2025",
+      "conclusao": "2026 (Cursando)",
       "local": "Belém - PA"
     },
     {
       "nivel": "Ensino Médio",
-      "instituicao": "Colégio Estadual para Surdos Alcindo Fanaya Junior",
-      "conclusao": "2017",
-      "local": ""
+      "instituicao": "Colégio Abraham Levy",
+      "conclusao": "2014",
+      "local": "Belém - PA"
     }
   ],
   "cursos": [
     {
-      "nome": "Pacote Office",
-      "instituicao": "",
-      "periodo": "",
-      "cargaHoraria": "100 horas"
-    },
-    {
-      "nome": "Auxiliar Administrativo",
-      "instituicao": "",
-      "periodo": "",
-      "cargaHoraria": "100 horas"
-    },
-    {
-      "nome": "Inglês Básico",
-      "instituicao": "",
-      "periodo": "",
-      "cargaHoraria": "10 horas"
-    },
-    {
-      "nome": "Adobe Photoshop - Modo Essencial",
-      "instituicao": "Héber Simeoni Cursos Online",
-      "periodo": "",
-      "cargaHoraria": "11 horas"
+      "nome": "Ministrante de Dança de Salão",
+      "instituicao": "Atuação autônoma / Formação contínua",
+      "periodo": "1998 - Presente",
+      "cargaHoraria": "Não especificada"
     }
   ],
   "competencias": [
-    "Atendimento e suporte administrativo",
-    "Organização de documentos e informações",
-    "Comunicação em Libras",
-    "Trabalho remoto",
-    "Boa adaptação a rotinas operacionais",
-    "Responsabilidade, discrição e compromisso"
+    "Dança como instrumento terapêutico",
+    "Pesquisa em dança e neurociência",
+    "Cultura amazônica e patrimônio cultural paraense",
+    "Docência em dança de salão",
+    "Produção intelectual e literária",
+    "Coordenação de projetos educacionais e culturais",
+    "Facilitação de processos de desenvolvimento humano",
+    "Intercâmbio cultural internacional"
   ],
   "idiomas": [
-    "Libras",
-    "Inglês Básico"
+    "Português (Nativo)",
+    "Espanhol (Intermediário)"
   ],
+  "publicacoes": [
+    {
+      "titulo": "A Dança como Terapia",
+      "tipo": "Livro",
+      "descricao": "Obra dedicada à investigação da dança enquanto instrumento de promoção da saúde, bem-estar, expressão emocional e desenvolvimento humano, estabelecendo relações entre corpo, movimento, música e processos terapêuticos.",
+      "linkVenda": "https://conhecimentoeciencia.my.canva.site/site-de-newsletter-para-clientes",
+      "linkCompra": "https://pay.voompcreators.com.br/15118"
+    },
+    {
+      "titulo": "A Dança do Tecno Melody",
+      "tipo": "Livro",
+      "descricao": "Obra dedicada ao estudo e à valorização do Tecno Melody enquanto manifestação cultural, artística e musical, contribuindo para a documentação e reflexão sobre expressões culturais contemporâneas da Amazônia.",
+      "linkVenda": "",
+      "linkCompra": ""
+    },
+    {
+      "titulo": "Brega: O Tango do Pará",
+      "tipo": "Pesquisa Cultural",
+      "descricao": "Estudo do Brega como manifestação cultural paraense, investigando suas características, identidade, trajetória e relação com a dança e a cultura amazônica. Busca contribuir para o reconhecimento e a valorização do patrimônio cultural produzido no Pará.",
+      "link": "https://drive.google.com/file/d/1Nr9hCrYCiTXUB-iRY8az6Pq0giABTIKD/view?usp=sharing"
+    },
+    {
+      "titulo": "Dança do Tecnomelody",
+      "tipo": "Pesquisa Cultural",
+      "descricao": "Documentação e reflexão sobre expressões culturais contemporâneas da Amazônia, com foco no Tecnomelody como manifestação musical e dançante.",
+      "link": "https://drive.google.com/file/d/1n4CJzzHByVLUGGXFKm9zve74MXOe_0bg/view?usp=sharing"
+    }
+  ],
+  "midia": {
+    "entrevistasPodcasts": [
+      {
+        "titulo": "Guia Podcast - Como a Dança Transforma a Saúde Mental",
+        "fonte": "YouTube Live",
+        "data": "20/07/2026",
+        "link": "https://www.youtube.com/live/th7MFzkOlXM?si=lrH949JCdvertqV8&t=564"
+      },
+      {
+        "titulo": "Mix Atualidades - Super Marajoara AM",
+        "fonte": "Rádio/Podcast",
+        "data": "21/11/2024",
+        "link": "https://www.youtube.com/watch?v=ZFzQrAnnTQc?t=7984s"
+      },
+      {
+        "titulo": "Dançar é terapêutico! Benefícios para saúde e corpo",
+        "fonte": "DOL.com.br",
+        "data": "01/09/2024",
+        "link": "https://dol.com.br/noticias/para/873542/dancar-e-terapeutico-veja-os-beneficios-para-saude-e-corpo?d=1"
+      },
+      {
+        "titulo": "A vida em movimento",
+        "fonte": "Jornal Diário do Pará",
+        "data": "31/08/2024",
+        "link": "https://drive.google.com/file/d/1ag09xQEua7NIig6TMbmgmz7yGjEdGD_1/view?usp=sharing"
+      },
+      {
+        "titulo": "Papo Nostalgia",
+        "fonte": "YouTube",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?t=244&v=z1TZ37xO6Vc"
+      },
+      {
+        "titulo": "Festeja 31 anos de carreira com baile",
+        "fonte": "DOL.com.br",
+        "data": "-",
+        "link": "https://dol.com.br/_/noticia-311632-thigana-festeja-31-anos-de-carreira-com-baile.html?d=1"
+      }
+    ],
+    "videosYoutube": [
+      {
+        "titulo": "A Dança do Tecnomelody - Marcelo Thiganá no É do Pará",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?v=RxdQw9IBfh8"
+      },
+      {
+        "titulo": "Marcelo Thiganá - O Brega é nosso, agora é Lei",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?v=R64H45oVJOM"
+      },
+      {
+        "titulo": "Marcelo Thiganá ensina os passos dos gêneros do brega",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?v=FO3at7E7Sq0"
+      },
+      {
+        "titulo": "A Dança de Salão no Pará: Uma Jornada com Marcelo Thiganá",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?v=Q1TATvvkG1A"
+      },
+      {
+        "titulo": "Pesquisa Dança do Brega (Playlist YouTube)",
+        "data": "-",
+        "link": "https://www.youtube.com/watch?v=5m5EtsZqQcs&list=PL3V_jeQbGspDrYQEPiWuXzTn9WwbQIcXF"
+      },
+      {
+        "titulo": "Canal Oficial YouTube",
+        "data": "-",
+        "link": "https://www.youtube.com/channel/UCTZvRpM2VUn74I25dopN17A"
+      }
+    ],
+    "materiasPortais": [
+      {
+        "titulo": "Thiganá na cena nacional da dança",
+        "portal": "Diário do Pará",
+        "data": "01/05/2025",
+        "link": "https://drive.google.com/file/d/1QqYnkKSJHZqwjlIP9DafTNoyzlqh3_3k/view?usp=sharing"
+      },
+      {
+        "titulo": "Dançar é terapêutico! Benefícios para saúde e corpo",
+        "portal": "DOL.com.br",
+        "data": "01/09/2024",
+        "link": "https://dol.com.br/noticias/para/873542/dancar-e-terapeutico-veja-os-beneficios-para-saude-e-corpo?d=1"
+      },
+      {
+        "titulo": "A vida em movimento",
+        "portal": "Jornal Diário do Pará",
+        "data": "31/08/2024",
+        "link": "https://drive.google.com/file/d/1ag09xQEua7NIig6TMbmgmz7yGjEdGD_1/view?usp=sharing"
+      },
+      {
+        "titulo": "Marcelo Thiganá ministra curso para professores de dança",
+        "portal": "O Liberal",
+        "data": "-",
+        "link": "https://www.oliberal.com/cultura/marcelo-thigana-ministra-curso-para-professores-de-danca-1.558191"
+      },
+      {
+        "titulo": "O Brega é nosso, agora é Lei",
+        "portal": "O Liberal",
+        "data": "-",
+        "link": "https://www.oliberal.com/cultura/marcelo-thigana-ensina-os-passos-dos-generos-do-brega-1.432877"
+      },
+      {
+        "titulo": "Festeja 31 anos de carreira com baile",
+        "portal": "DOL.com.br",
+        "data": "-",
+        "link": "https://dol.com.br/_/noticia-311632-thigana-festeja-31-anos-de-carreira-com-baile.html?d=1"
+      }
+    ],
+    "arquivosDrive": [
+      {
+        "titulo": "O Brega é nosso, agora é Lei",
+        "tipo": "Vídeo",
+        "link": "https://drive.google.com/file/d/1fmg18OLI2i1B_2nGss2_d9oPCcJTqKZq/view?usp=sharing"
+      },
+      {
+        "titulo": "Professor ensina passos do brega",
+        "tipo": "Vídeo",
+        "link": "https://drive.google.com/file/d/12n2r1NNVLp6wfU0y2NctizeALvpZmGUS/view?usp=sharing"
+      },
+      {
+        "titulo": "Dança do Brega - Abertura",
+        "tipo": "Vídeo",
+        "link": "https://drive.google.com/file/d/1FEBK8MvxSf7bOav7AlUtDYqNPs52fb6L/view?usp=sharing"
+      },
+      {
+        "titulo": "Vídeos A Dança do Brega",
+        "tipo": "Pasta",
+        "link": "https://drive.google.com/drive/folders/1MvKc5uv1pFLuD0m-o8CyWD8NnfDfn1aS?usp=sharing"
+      },
+      {
+        "titulo": "Bom Dia Pará - Brega Patrimônio Imaterial",
+        "tipo": "Pasta",
+        "link": "https://drive.google.com/drive/folders/1JAqsVjugHhvP5Sxzaw7UFVGEIkRXTFCR?usp=sharing"
+      },
+      {
+        "titulo": "É do Pará - Tecnomelody",
+        "tipo": "Pasta",
+        "link": "https://drive.google.com/drive/folders/1VKPJqQeKnIh7TLFIurp8xebeTxMFwXKy?usp=sharing"
+      },
+      {
+        "titulo": "LAMBADA - JORNAL LIBERAL",
+        "tipo": "Pasta",
+        "link": "https://drive.google.com/drive/folders/1WOXWyWEaVWied9fDbVsvcOIHB2l3vT82?usp=sharing"
+      },
+      {
+        "titulo": "LIBERAL COMUNIDADE",
+        "tipo": "Pasta",
+        "link": "https://drive.google.com/drive/folders/1_QY92RouDNxLZUnoJU0A05H8l2uDSOOc?usp=sharing"
+      }
+    ]
+  },
   "informacoesAdicionais": {
-    "documentacao": "Documentação completa e em ordem",
-    "disponibilidade": "Disponibilidade de horário"
+    "contribuicaoCultural": "Valorização da identidade cultural amazônica/paraense através de pesquisa, dança e produção intelectual como instrumentos de preservação, divulgação e reconhecimento das manifestações culturais da região.",
+    "abordagemTerapêutica": "Dança como Terapia - movimento como recurso para estimular aspectos relacionados ao bem-estar, expressão corporal, socialização, autoestima e qualidade de vida. Diálogo com dança, educação, psicologia, saúde, terapia e neurociência.",
+    "linktree": "https://linktr.ee/marcelothigana",
+    "instagram": "https://www.instagram.com/marcelothigana",
+    "facebook": "https://www.facebook.com/marcelothigana",
+    "youtube": "https://www.youtube.com/@marcelothigana",
+    "x": "https://x.com/marcelothiganah"
   }
 }

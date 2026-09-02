@@ -115,7 +115,7 @@ function createEditButton() {
     Editar
   `;
   btn.onclick = () => {
-    window.open('https://github.com/pedrogg20/curriculo/blob/main/src/data.json', '_blank');
+    window.open('https://github.com/marcelothigana/curriculo/blob/main/data.json', '_blank');
   };
   return btn;
 }
