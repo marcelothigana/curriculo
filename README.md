@@ -1,6 +1,6 @@
-# Currículo Web - Pedro Elias
+# Currículo Web - Marcelino de Oliveira
 
-Sistema web para edição e visualização do currículo de Pedro Elias dos Santos Ferreira.
+Sistema web para edição e visualização do currículo de Marcelino de Oliveira.
 
 ## Como funciona
 
@@ -52,13 +52,13 @@ Depois, acesse: **http://localhost:5500**
 
 ### Online (via GitHub Pages)
 
-Acesse: `https://pedrogg20.github.io/curriculo/`
+Acesse: `https://marcelothigana.github.io/curriculo/`
 
 ## Como editar seu currículo
 
 A edição é feita diretamente no repositório do GitHub:
 
-1. Acesse `https://github.com/pedrogg20/curriculo/blob/main/src/data.json`
+1. Acesse `https://github.com/marcelothigana/curriculo/blob/main/src/data.json`
 2. Clique no ícone de lápis (✏️) para editar
 3. Faça as alterações necessárias no JSON
 4. Role para baixo e clique em "Commit changes"
@@ -89,6 +89,6 @@ Para mudar as cores do currículo, edite as variáveis CSS no início do arquivo
 
 ---
 
-© 2026 Currículo de Pedro Elias dos Santos Ferreira
+© 2026 Currículo de Marcelino de Oliveira
 
 Licenciado sob a [MIT License](LICENSE)
