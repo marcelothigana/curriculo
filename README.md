@@ -6,7 +6,7 @@ Sistema web para edição e visualização do currículo de Marcelino de Oliveir
 
 Este projeto permite que você visualize seu currículo online e o converta automaticamente para PDF.
 
-A estrutura é baseada em:
+A estrutura é baseada em :
 - **HTML5** para estrutura semântica
 - **CSS3** com variáveis para fácil customização de cores
 - **JavaScript (ES Modules)** para renderização dinâmica
