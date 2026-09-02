@@ -104,22 +104,15 @@
     },
     {
       "titulo": "A Dança do Tecno Melody",
-      "tipo": "Livro",
+      "tipo": "Livro / Pesquisa Cultural",
       "descricao": "Obra dedicada ao estudo e à valorização do Tecno Melody enquanto manifestação cultural, artística e musical, contribuindo para a documentação e reflexão sobre expressões culturais contemporâneas da Amazônia.",
-      "linkVenda": "",
-      "linkCompra": ""
+      "link": "https://drive.google.com/file/d/1n4CJzzHByVLUGGXFKm9zve74MXOe_0bg/view?usp=sharing"
     },
     {
       "titulo": "Brega: O Tango do Pará",
       "tipo": "Pesquisa Cultural",
       "descricao": "Estudo do Brega como manifestação cultural paraense, investigando suas características, identidade, trajetória e relação com a dança e a cultura amazônica. Busca contribuir para o reconhecimento e a valorização do patrimônio cultural produzido no Pará.",
       "link": "https://drive.google.com/file/d/1Nr9hCrYCiTXUB-iRY8az6Pq0giABTIKD/view?usp=sharing"
-    },
-    {
-      "titulo": "Dança do Tecnomelody",
-      "tipo": "Pesquisa Cultural",
-      "descricao": "Documentação e reflexão sobre expressões culturais contemporâneas da Amazônia, com foco no Tecnomelody como manifestação musical e dançante.",
-      "link": "https://drive.google.com/file/d/1n4CJzzHByVLUGGXFKm9zve74MXOe_0bg/view?usp=sharing"
     }
   ],
   "midia": {
