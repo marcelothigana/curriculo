@@ -27,7 +27,7 @@ async function generatePDF() {
 
   // Gerar o PDF
   await page.pdf({
-    path: path.join(__dirname, '..', 'dist', 'currículo-tatiana.pdf'),
+    path: path.join(__dirname, '..', 'dist', 'curriculo-marcelino-thigana.pdf'),
     format: 'A4',
     printBackground: true,
     margin: {

@@ -1,7 +1,7 @@
 {
-  "name": "curriculo-pedro-elias",
+  "name": "curriculo-marcelino-thigana",
   "version": "2.0.0",
-  "description": "Currículo web de Pedro Elias dos Santos Ferreira",
+  "description": "Currículo web de Marcelino Thiganá",
   "main": "src/index.html",
   "scripts": {
     "start": "npx http-server src -p 3000",
@@ -11,6 +11,6 @@
     "curriculo",
     "pdf"
   ],
-  "author": "Pedro Elias dos Santos Ferreira",
+  "author": "Marcelino Thiganá",
   "license": "MIT"
 }
