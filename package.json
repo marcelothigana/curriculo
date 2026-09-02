@@ -1,7 +1,7 @@
 {
   "name": "curriculo-marcelino-thigana",
   "version": "2.0.0",
-  "description": "Currículo web de Marcelino Thiganá",
+  "description": "Currículo web de Marcelino de Oliveira",
   "main": "src/index.html",
   "scripts": {
     "start": "npx http-server src -p 3000",
@@ -11,6 +11,6 @@
     "curriculo",
     "pdf"
   ],
-  "author": "Marcelino Thiganá",
+  "author": "Marcelino de Oliveira",
   "license": "MIT"
 }
