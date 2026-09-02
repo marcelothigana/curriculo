@@ -10,21 +10,13 @@ const app = document.getElementById('app');
 // Carregar dados do JSON
 async function loadData() {
   try {
-    // Tenta carregar do localStorage primeiro (dados salvos localmente)
-    const storedData = localStorage.getItem('curriculo-pedro-data');
-    
-    if (storedData) {
-      currentData = JSON.parse(storedData);
-      console.log('Dados carregados do localStorage');
-    } else {
-      // Se não houver dados locais, carrega do data.json
-      const response = await fetch('./data.json');
-      if (!response.ok) {
-        throw new Error('Erro ao carregar data.json');
-      }
-      currentData = await response.json();
-      console.log('Dados carregados do data.json');
+    // Sempre carrega do data.json
+    const response = await fetch('./data.json');
+    if (!response.ok) {
+      throw new Error('Erro ao carregar data.json');
     }
+    currentData = await response.json();
+    console.log('Dados carregados do data.json');
     
     render();
   } catch (error) {
@@ -115,7 +107,7 @@ function createEditButton() {
     Editar
   `;
   btn.onclick = () => {
-    window.open('https://github.com/pedrogg20/curriculo/blob/main/src/data.json', '_blank');
+    window.open('https://github.com/marcelothigana/curriculo/blob/main/data.json', '_blank');
   };
   return btn;
 }
@@ -150,7 +142,19 @@ function createMainContent() {
 
   main.appendChild(createResumoSection());
   main.appendChild(createFormacaoSection());
-  main.appendChild(createExperienciaSection());
+  
+  // Experiência Docente
+  const expDocenteSection = createExperienciaDocenteSection();
+  if (expDocenteSection) {
+    main.appendChild(expDocenteSection);
+  }
+  
+  // Experiência Internacional
+  const expInternacionalSection = createExperienciaInternacionalSection();
+  if (expInternacionalSection) {
+    main.appendChild(expInternacionalSection);
+  }
+  
   main.appendChild(createCursosSection());
 
   return main;
@@ -304,38 +308,55 @@ function createFormacaoSection() {
   return section;
 }
 
-// Experiência
-function createExperienciaSection() {
+// Experiência Docente
+function createExperienciaDocenteSection() {
   const section = document.createElement('section');
   section.className = 'content-section';
 
-  let entries = currentData.experiencia.map(exp => {
-    let periodoDisplay = exp.periodo;
-    let localDisplay = exp.local;
-    
-    if (!localDisplay && exp.periodo) {
-      const partes = exp.periodo.split('|').map(p => p.trim());
-      if (partes.length >= 2) {
-        periodoDisplay = partes[0];
-        localDisplay = partes.slice(1).join(' | ');
-      }
-    }
-    
-    return `
+  if (!currentData.experienciaDocente || currentData.experienciaDocente.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.experienciaDocente.map(exp => `
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">${exp.cargo} | ${exp.empresa}</span>
+        <span class="entry-title">${exp.tipo}</span>
+        <span class="entry-date">${exp.periodo}</span>
       </div>
-      ${localDisplay ? `<div class="entry-subtitle">${localDisplay}</div>` : ''}
-      <div class="entry-date-line">${periodoDisplay}</div>
       <ul class="entry-description">
-        ${exp.descricao.map(desc => `<li>${desc}</li>`).join('')}
+        ${exp.atividades.map(desc => `<li>${desc}</li>`).join('')}
       </ul>
     </div>
-  `}).join('');
+  `).join('');
 
   section.innerHTML = `
-    <h2 class="section-title"><i data-lucide="briefcase"></i>Experiência Profissional</h2>
+    <h2 class="section-title"><i data-lucide="briefcase"></i>Experiência Docente e Formativa</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Experiência Internacional
+function createExperienciaInternacionalSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.experienciaInternacional || currentData.experienciaInternacional.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.experienciaInternacional.map(exp => `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${exp.local}</span>
+      </div>
+      <div class="entry-subtitle">${exp.tipo}</div>
+    </div>
+  `).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="globe"></i>Experiência Internacional</h2>
     ${entries}
   `;
 
@@ -445,29 +466,6 @@ function renderEditForm() {
     </div>
   `;
 
-  // Seção de Experiência
-  formHTML += `
-    <div class="edit-section">
-      <h3>Experiência Profissional</h3>
-      <div id="experiencia-list">
-        ${currentData.experiencia.map((exp, index) => `
-          <div class="form-group experiencia-item" data-index="${index}">
-            <div class="form-actions">
-              <label>Experiência ${index + 1}</label>
-              <button type="button" class="remove-item-btn" data-action="remove-experiencia" data-index="${index}">Remover</button>
-            </div>
-            <input type="text" class="edit-experiencia-empresa" value="${exp.empresa}" placeholder="Empresa">
-            <input type="text" class="edit-experiencia-periodo" value="${exp.periodo}" placeholder="Período">
-            <input type="text" class="edit-experiencia-cargo" value="${exp.cargo}" placeholder="Cargo">
-            <input type="text" class="edit-experiencia-local" value="${exp.local || ''}" placeholder="Local (opcional)">
-            <textarea class="edit-experiencia-descricao" rows="3" placeholder="Descrição (uma linha por item)">${exp.descricao.join('\n')}</textarea>
-          </div>
-        `).join('')}
-      </div>
-      <button type="button" class="add-item-btn" data-action="add-experiencia">+ Adicionar Experiência</button>
-    </div>
-  `;
-
   // Seção de Cursos
   formHTML += `
     <div class="edit-section">
@@ -520,22 +518,6 @@ function addFormacao() {
   renderEditForm();
 }
 
-function removeExperiencia(index) {
-  currentData.experiencia.splice(index, 1);
-  renderEditForm();
-}
-
-function addExperiencia() {
-  currentData.experiencia.push({
-    empresa: '',
-    periodo: '',
-    cargo: '',
-    local: '',
-    descricao: []
-  });
-  renderEditForm();
-}
-
 function removeCurso(index) {
   currentData.cursos.splice(index, 1);
   renderEditForm();
@@ -558,8 +540,6 @@ function handleRemoveClick(event) {
   
   if (action === 'remove-formacao') {
     removeFormacao(index);
-  } else if (action === 'remove-experiencia') {
-    removeExperiencia(index);
   } else if (action === 'remove-curso') {
     removeCurso(index);
   }
@@ -570,8 +550,6 @@ function handleAddClick(event) {
   
   if (action === 'add-formacao') {
     addFormacao();
-  } else if (action === 'add-experiencia') {
-    addExperiencia();
   } else if (action === 'add-curso') {
     addCurso();
   }
@@ -603,35 +581,10 @@ async function saveEdits() {
       local: el.querySelector('.edit-formacao-local').value.trim()
     }));
 
-    // Experiência
-    const experienciaElements = document.querySelectorAll('.experiencia-item');
-    currentData.experiencia = Array.from(experienciaElements).map((el, i) => ({
-      empresa: el.querySelector('.edit-experiencia-empresa').value.trim(),
-      periodo: el.querySelector('.edit-experiencia-periodo').value.trim(),
-      cargo: el.querySelector('.edit-experiencia-cargo').value.trim(),
-      local: el.querySelector('.edit-experiencia-local').value.trim(),
-      descricao: el.querySelector('.edit-experiencia-descricao').value
-        .split('\n')
-        .map(d => d.trim())
-        .filter(d => d.length > 0)
-    }));
-
-    // Cursos
-    const cursosElements = document.querySelectorAll('.curso-item');
-    currentData.cursos = Array.from(cursosElements).map((el, i) => ({
-      nome: el.querySelector('.edit-curso-nome').value.trim(),
-      instituicao: el.querySelector('.edit-curso-instituicao').value.trim(),
-      periodo: el.querySelector('.edit-curso-periodo').value.trim(),
-      cargaHoraria: el.querySelector('.edit-curso-cargaHoraria').value.trim()
-    }));
-
-    // Salvar no localStorage (para uso local imediato)
-    localStorage.setItem('curriculo-pedro-data', JSON.stringify(currentData));
-
     alert('Alterações salvas com sucesso!\n\nAs alterações estão visíveis agora na tela.');
 
     // Recarregar o currículo para mostrar as alterações
-    loadData();
+    render();
   } catch (error) {
     console.error('Erro ao salvar:', error);
     alert('Erro ao salvar as alterações: ' + error.message + '\n\nTente novamente.');
