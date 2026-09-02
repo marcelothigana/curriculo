@@ -157,6 +157,42 @@ function createMainContent() {
   
   main.appendChild(createCursosSection());
 
+  // Publicações e Pesquisas
+  const publicacoesSection = createPublicacoesSection();
+  if (publicacoesSection) {
+    main.appendChild(publicacoesSection);
+  }
+
+  // Mídia - Entrevistas e Podcasts
+  const entrevistasSection = createEntrevistasSection();
+  if (entrevistasSection) {
+    main.appendChild(entrevistasSection);
+  }
+
+  // Mídia - Vídeos YouTube
+  const videosSection = createVideosSection();
+  if (videosSection) {
+    main.appendChild(videosSection);
+  }
+
+  // Mídia - Matérias em Portais
+  const materiasSection = createMateriasSection();
+  if (materiasSection) {
+    main.appendChild(materiasSection);
+  }
+
+  // Mídia - Arquivos Drive
+  const arquivosSection = createArquivosDriveSection();
+  if (arquivosSection) {
+    main.appendChild(arquivosSection);
+  }
+
+  // Informações Adicionais
+  const infoSection = createInformacoesAdicionaisSection();
+  if (infoSection) {
+    main.appendChild(infoSection);
+  }
+
   return main;
 }
 
@@ -390,6 +426,223 @@ function createCursosSection() {
   `;
 
   return section;
+}
+
+// Publicações
+function createPublicacoesSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.publicacoes || currentData.publicacoes.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.publicacoes.map(pub => {
+    let linksHTML = '';
+    if (pub.linkVenda) {
+      linksHTML += `<a href="${pub.linkVenda}" target="_blank" class="publication-link">Página de vendas</a>`;
+    }
+    if (pub.linkCompra) {
+      linksHTML += ` <a href="${pub.linkCompra}" target="_blank" class="publication-link">Comprar</a>`;
+    }
+    if (pub.link) {
+      linksHTML += `<a href="${pub.link}" target="_blank" class="publication-link">Acessar</a>`;
+    }
+
+    return `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${pub.titulo}</span>
+        <span class="entry-date">${pub.tipo}</span>
+      </div>
+      <div class="entry-description">${pub.descricao}</div>
+      ${linksHTML ? `<div class="entry-links">${linksHTML}</div>` : ''}
+    </div>
+  `}).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="book-open"></i>Publicações e Pesquisas</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Mídia - Entrevistas e Podcasts
+function createEntrevistasSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.midia || !currentData.midia.entrevistasPodcasts || currentData.midia.entrevistasPodcasts.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.midia.entrevistasPodcasts.map(item => `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${item.titulo}</span>
+        <span class="entry-date">${item.data}</span>
+      </div>
+      <div class="entry-subtitle">${item.fonte}</div>
+      <div class="entry-links">
+        <a href="${item.link}" target="_blank" class="publication-link">Assistir/ Ler</a>
+      </div>
+    </div>
+  `).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="mic"></i>Entrevistas e Podcasts</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Mídia - Vídeos YouTube
+function createVideosSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.midia || !currentData.midia.videosYoutube || currentData.midia.videosYoutube.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.midia.videosYoutube.map(item => `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${item.titulo}</span>
+      </div>
+      <div class="entry-links">
+        <a href="${item.link}" target="_blank" class="publication-link">Assistir no YouTube</a>
+      </div>
+    </div>
+  `).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="video"></i>Vídeos</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Mídia - Matérias em Portais
+function createMateriasSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.midia || !currentData.midia.materiasPortais || currentData.midia.materiasPortais.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.midia.materiasPortais.map(item => `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${item.titulo}</span>
+        <span class="entry-date">${item.data}</span>
+      </div>
+      <div class="entry-subtitle">${item.portal}</div>
+      <div class="entry-links">
+        <a href="${item.link}" target="_blank" class="publication-link">Ler matéria</a>
+      </div>
+    </div>
+  `).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="newspaper"></i>Matérias em Portais</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Mídia - Arquivos Drive
+function createArquivosDriveSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.midia || !currentData.midia.arquivosDrive || currentData.midia.arquivosDrive.length === 0) {
+    return null;
+  }
+
+  let entries = currentData.midia.arquivosDrive.map(item => `
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">${item.titulo}</span>
+        <span class="entry-date">${item.tipo}</span>
+      </div>
+      <div class="entry-links">
+        <a href="${item.link}" target="_blank" class="publication-link">Acessar no Drive</a>
+      </div>
+    </div>
+  `).join('');
+
+  section.innerHTML = `
+    <h2 class="section-title"><i data-lucide="folder"></i>Arquivos e Vídeos no Drive</h2>
+    ${entries}
+  `;
+
+  return section;
+}
+
+// Informações Adicionais
+function createInformacoesAdicionaisSection() {
+  const section = document.createElement('section');
+  section.className = 'content-section';
+
+  if (!currentData.informacoesAdicionais) {
+    return null;
+  }
+
+  const info = currentData.informacoesAdicionais;
+  let contentHTML = '';
+
+  if (info.contribuicaoCultural) {
+    contentHTML += `
+      <div class="additional-info">
+        <h3>Contribuição Cultural</h3>
+        <p>${info.contribuicaoCultural}</p>
+      </div>
+    `;
+  }
+
+  if (info.abordagemTerapêutica) {
+    contentHTML += `
+      <div class="additional-info">
+        <h3>Abordagem Terapêutica</h3>
+        <p>${info.abordagemTerapêutica}</p>
+      </div>
+    `;
+  }
+
+  // Links das redes sociais
+  const socialLinks = [];
+  if (info.linktree) socialLinks.push({ name: 'Linktree', url: info.linktree });
+  if (info.instagram) socialLinks.push({ name: 'Instagram', url: info.instagram });
+  if (info.facebook) socialLinks.push({ name: 'Facebook', url: info.facebook });
+  if (info.youtube) socialLinks.push({ name: 'YouTube', url: info.youtube });
+  if (info.x) socialLinks.push({ name: 'X', url: info.x });
+
+  if (socialLinks.length > 0) {
+    contentHTML += `
+      <div class="additional-info">
+        <h3>Redes Sociais</h3>
+        <div class="social-links">
+          ${socialLinks.map(link => `<a href="${link.url}" target="_blank" class="social-link">${link.name}</a>`).join(' ')}
+        </div>
+      </div>
+    `;
+  }
+
+  if (contentHTML) {
+    section.innerHTML = `
+      <h2 class="section-title"><i data-lucide="info"></i>Informações Adicionais</h2>
+      ${contentHTML}
+    `;
+    return section;
+  }
+
+  return null;
 }
 
 // Renderizar formulário de edição
